@@ -7,6 +7,7 @@ import {
   Link,
 } from "react-router-dom";
 import NoMatch from './Components/NoMatch/NoMatch';
+import UserDetils from './Components/UserDetails/UserDetils';
 
 
 
@@ -17,7 +18,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/home' element={<Home/>}></Route>
-        <Route path='/' element={<Home/>}></Route>
+        <Route exact path='/' element={<Home/>}></Route>
+        <Route path='/about/:userId' element={<UserDetils/>}></Route>
+
         <Route path='*' element={<NoMatch/>}></Route>
 
       </Routes>
